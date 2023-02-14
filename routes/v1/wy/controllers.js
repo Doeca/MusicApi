@@ -10,6 +10,7 @@ const { topCategory } = require('./top');
 const { recommendSongs } = require('./recommendSongs');
 const { comment, comment_hot } = require('./comment');
 const { login_refresh, login } = require('./login');
+const { songDetail } = require('./songDetail');
 
 
 // 新建 wy 路由
@@ -18,6 +19,7 @@ const wy = new Router();
 // add get method
 wy.get('/song', song);
 wy.get('/songUrl', songUrl);
+wy.get('/songDetail', songDetail);
 wy.get('/getcookie', getcookie);
 
 wy.get('/playlist/info', playlist_Info);
@@ -36,7 +38,6 @@ wy.get('/recommendSongs', recommendSongs);
 
 wy.get('/comment', comment);
 wy.get('/comment/hot', comment_hot);
-
 
 // // add post method
 wy.post('/setcookie', setcookie);
