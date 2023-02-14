@@ -8,6 +8,7 @@ const { getcookie, setcookie, refresh } = require('./cookie');
 const { playlist_Info } = require('./playlist'); /* playlist_tagCategory, playlist_Tag, */
 const { login, login_scan } = require('./login');
 const { comment } = require('./comment');
+const { songDetail } = require('./songDetail');
 
 // 新建 QQ 路由
 const qq = new Router();
@@ -19,6 +20,7 @@ qq.get('/hotSearch', hotSearch);
 qq.get('/suggestSearch', suggestSearch);
 
 qq.get('/song', song);
+qq.get('/songDetail', songDetail);
 // qq.get('/songInfo', songInfo);
 
 qq.get('/lyric', lyric);
